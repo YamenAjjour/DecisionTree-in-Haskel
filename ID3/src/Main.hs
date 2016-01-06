@@ -35,7 +35,7 @@ prop_hello s = stripPrefix "Hello " (hello s) == Just s
 -- Hello World
 exeMain = do
     putStrLn (hello "World")
-    file <- readFile "/home/yamen/uni/Haskell/git/intro-fp/ID3/data/car.csv"
+    file <- readFile "../data/car.csv"
     let cars = lines file
     let l_cars = map (splitOn ",") cars
     let l_instances = map extractLabeledInstance l_cars
