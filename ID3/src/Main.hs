@@ -34,16 +34,14 @@ prop_hello s = stripPrefix "Hello " (hello s) == Just s
 
 -- Hello World
 exeMain = do
-    putStrLn (hello "World")
     file <- readFile "../data/car.csv"
-    let cars = lines file
-    let l_cars = map (splitOn ",") cars
-    let l_instances = map extractLabeledInstance l_cars
-    mapM_ (putStrLn . fst) l_instances
-    let numOfInstances = fromIntegral(length(l_instances))
-    let a = (best_attribute [0..5] l_instances)
-    print (a)
-    print(numOfInstances)
+    let data_lines = lines file
+    let tokenized_data_lines = map (splitOn ",") data_lines
+    let instances = map extractLabeledInstance tokenized_data_lines
+    mapM_ (putStrLn . fst) instances -- printing
+    let numOfInstances = fromIntegral(length(instances))
+    let a = (best_attribute [0..5] instances)
+    print(a)
     putStrLn "Hello Arabs"
 
 -- Entry point for unit tests.

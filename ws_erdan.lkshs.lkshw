@@ -1,0 +1,10 @@
+Version of workspace file format:
+               1
+Time of storage:
+               "Sat Jan 16 10:54:10 CET 2016"
+Name of the workspace:
+               "ws_erdan.lkshs"
+File paths of contained packages:
+               ["ID3/ID3.cabal"]
+Maybe file path of an active package:
+               Just "ID3/ID3.cabal"
