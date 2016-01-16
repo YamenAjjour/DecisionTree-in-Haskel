@@ -1,3 +1,8 @@
+--Author : Yamen Ajjour 
+-- Martikulation Number : 115082
+-- Uni Weimar 
+
+
 import Data.List
 square_list :: [Integer] -> [Integer]
 square_list a = map (\n -> n*n)a
