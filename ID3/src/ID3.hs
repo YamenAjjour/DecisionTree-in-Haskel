@@ -13,10 +13,13 @@
 -----------------------------------------------------------------------------
 
 module ID3 (
-best_attribute,
-split_data,
-build_tree
-) where
+    best_attribute,
+    split_data,
+    build_tree,
+    print_tree,
+    classify_instance
+    )
+    where
 
 import Cars
 import Data.Ord
@@ -24,13 +27,24 @@ import Data.List
 import Data.Maybe
 
 
-data DecisionTree a b = Leaf b -- Leafs's labels
+data DecisionTree a b =
+    Leaf b -- Leafs's labels
     | Node {
         att_index ::Int, -- Attribute's index
         child :: a -> (DecisionTree a b) -- Childrens
         }
 
-type DT_String= DecisionTree [Char] [Char]
+type DT_String = DecisionTree [Char] [Char]
+
+factorial n = if n == 0 then 1 else n * factorial (n - 1)
+
+-- recursive call
+print_tree :: DT_String -> String
+print_tree(Leaf b) = b
+print_tree(Node att_index child ) = ( show att_index )
+
+classify_instance :: [[Char]] -> DT_String -> Int
+classify_instance attributes tree = length attributes
 
 count ::(Eq a) => a -> [a] -> Int
 count x ys = length(filter (==x) ys)
@@ -102,14 +116,14 @@ label_instances list = fst (maximumBy ( comparing snd) aggregated_classes)
     where aggregated_classes = agg_with_element ( map (fst)  list)
 
 build_tree :: [Int] -> [LabeledCar] -> DT_String
-build_tree  (indices) l_instances
-    | (pure_instances l_instances) = (Leaf (label_instances l_instances))
-    | (length(indices)==1 ) = (Leaf (label_instances l_instances))
-    | otherwise = Node {att_index = best_index,child = safeLookup }
+build_tree indices l_instances
+    | pure_instances l_instances = Leaf ( label_instances l_instances )
+    | (length(indices)==1 ) = Leaf ( label_instances l_instances )
+    | otherwise = Node {att_index = best_index, child = safeLookup }
         where
-            best_index = (best_attribute   indices l_instances)
+            best_index = (best_attribute indices l_instances)
             splitted_data = split_data best_index l_instances
-            left_indices = ( filter  (/= best_index ) indices )
+            left_indices = ( filter (/= best_index ) indices )
             splitted_data_without_attr = (map (snd) splitted_data )
             attrs = (map (fst) splitted_data )
             children = map ( build_tree left_indices ) splitted_data_without_attr
