@@ -1,0 +1,18 @@
+Version of session file format:
+               1
+Time of storage:
+               "Thu Jan 28 13:39:42 CET 2016"
+Layout:        VerticalP (TerminalP {paneGroups = fromList [], paneTabs = Just TopP, currentPage = -1, detachedId = Nothing, detachedSize = Nothing}) (HorizontalP (TerminalP {paneGroups = fromList [("Browser",HorizontalP (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) (HorizontalP (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) 205) 142)], paneTabs = Just BottomP, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) 509) 686
+Population:    [(Just (ErrorsSt ErrorsState),[SplitP RightP,SplitP TopP]),(Just (FilesSt FilesState),[SplitP RightP,SplitP TopP]),(Just (InfoSt (InfoState Nothing)),[SplitP RightP,SplitP TopP,GroupP "Browser",SplitP BottomP,SplitP BottomP]),(Just (LogSt LogState),[SplitP RightP,SplitP BottomP]),(Just (ModulesSt (ModulesState 286 (PackageScope False,False) (Just (ModuleName ["Main"]),Nothing) (ExpanderState {packageExp = ([],[]), packageExpNoBlack = ([],[]), packageDExp = ([],[]), packageDExpNoBlack = ([],[]), workspaceExp = ([],[]), workspaceExpNoBlack = ([],[]), workspaceDExp = ([],[]), workspaceDExpNoBlack = ([],[]), systemExp = ([],[]), systemExpNoBlack = ([],[])}))),[SplitP RightP,SplitP TopP,GroupP "Browser",SplitP BottomP,SplitP TopP]),(Just (WorkspaceSt WorkspaceState),[SplitP RightP,SplitP TopP,GroupP "Browser",SplitP TopP])]
+Window size:   (1600,876)
+Completion size:
+               (750,400)
+Workspace:     Just "/home/neffle/workspace/intro-fp/workspace.leskah"
+Active pane:   Nothing
+Toolbar visible:
+               True
+FindbarState:  (False,FindState {entryStr = "", entryHist = [""], replaceStr = "", replaceHist = [], caseSensitive = False, entireWord = False, wrapAround = False, regex = False, lineNr = 1})
+Recently opened files:
+               ["/home/neffle/workspace/leksah-demo/demo/src/Main.hs","/home/neffle/workspace/intro-fp/ID3/ID3.hs","/home/neffle/workspace/intro-fp/ID3/main.hs","/home/neffle/workspace/intro-fp/ID3/lab.hs","/home/neffle/workspace/intro-fp/ID3/src/Main.hs","/home/neffle/workspace/intro-fp/ID3/src/ID3.hs","/home/neffle/.leksah-0.12/leksah-welcome/src/Main.hs"]
+Recently opened workspaces:
+               ["/home/neffle/workspace/leksah-demo/leksah-demo.lkshw","/home/neffle/workspace/intro-fp/ws_erdan.lkshs.lkshw","/home/neffle/workspace/intro-fp/ws_erdan.lkshw","/home/neffle/workspace/intro-fp/workspace.leskah.lkshw","/home/neffle/workspace/intro-fp/workspace.leskah","/home/neffle/leksah.lkshw"]
